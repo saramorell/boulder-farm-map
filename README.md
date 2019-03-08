@@ -15,6 +15,7 @@
 
 ## Server Routes Plan
 GET /api/farm Retrieve all farms
+
 GET /api/farm_activities/:id Retrieve a single farms activities
 
 
