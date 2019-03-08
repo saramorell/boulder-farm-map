@@ -11,6 +11,7 @@
 ## Schema/ ERD for Database
 [ERD for Boulder Farm Map](https://www.lucidchart.com/invitations/accept/2e079e10-6dfd-4e47-aaea-8644f7cb805c)
 
+!(https://github.com/saramorell/boulder-farm-map/blob/master/erd-boulder-farm-map.png "ERD image for Boulder Farm Map")
 
 ## Server Routes Plan
 GET /api/farm Retrieve all farms
