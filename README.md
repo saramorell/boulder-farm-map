@@ -13,6 +13,7 @@
 ## Style Guide
 
 Colors:
+
 ![alt text](farm-map-colors.png "colors for Boulder Farm Map")
 
 
