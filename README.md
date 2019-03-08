@@ -8,6 +8,8 @@
 
 ## Planning
 
+[Trello Board for Boulder Farm Map](https://trello.com/b/9XLW29BM/boulder-farm-map)
+
 ## Schema/ ERD for Database
 [ERD for Boulder Farm Map](https://www.lucidchart.com/invitations/accept/2e079e10-6dfd-4e47-aaea-8644f7cb805c)
 
