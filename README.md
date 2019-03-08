@@ -14,9 +14,9 @@
 ![alt text](https://github.com/saramorell/boulder-farm-map/blob/master/boulder-farm-map-erd.png "ERD image for Boulder Farm Map")
 
 ## Server Routes Plan
-GET /api/farm Retrieve all farms
+GET /api/farm *Retrieve all farms*
 
-GET /api/farm_activities/:id Retrieve a single farms activities
+GET /api/farm_activities/:id *Retrieve a single farm's activities*
 
 
 
