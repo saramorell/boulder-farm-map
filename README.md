@@ -4,7 +4,6 @@
 
 ## Wireframes
 
-<a href="https://xd.adobe.com/view/18e8d5f3-a140-4fd9-6a92-4ad4d0b77ded-6ed9/?fullscreen&hints=off" target="_blank">Adobe XD Prototype</a>
 [Adobe XD Prototype](https://xd.adobe.com/view/18e8d5f3-a140-4fd9-6a92-4ad4d0b77ded-6ed9/?fullscreen&hints=off)
 
 ![alt text]
