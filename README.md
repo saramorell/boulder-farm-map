@@ -10,6 +10,9 @@
 
 ## Style Guide
 
+Fonts: Roboto & Nanito Sans
+`<link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto:400,700" rel="stylesheet">`
+
 ## Planning
 
 [Trello Board](https://trello.com/b/9XLW29BM/boulder-farm-map)
