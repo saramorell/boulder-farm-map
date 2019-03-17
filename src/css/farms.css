@@ -34,3 +34,41 @@ img.map-image {
 .hidden {
   visibility: hidden;
 }
+
+
+
+/* .grow-active { transform: scale(1.1); } */
+
+/* .cls-2{fill:#145e68;}
+.cls-3{fill:#f99108;}
+.cls-4{fill:#17b5c1;} */
+
+.grow {
+  -webkit-transition: fill .4s ease-in-out;
+	 	-moz-transition: fill .4s ease-in-out;
+	 	-o-transition: fill .4s ease-in-out;
+	 	transition: fill .4s ease-in-out;
+  }
+#marker {fill: pink;}
+
+#marker.active {fill: blue!important;
+  stroke: blue;}
+
+/* .animate-marker{
+  animation-name: grow;
+}
+
+@keyframes grow {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+} */
+
+/* transition: color 200ms,font-size 400ms;
+    transition-property: color, font-size;
+    transition-duration: 200ms, 400ms;
+    transition-timing-function: ease, ease;
+    transition-delay: 0s, 0s; */

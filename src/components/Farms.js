@@ -9,17 +9,14 @@ class Farms extends Component {
 
   state = {
     visible:false,
-    active: 1,
+    active:0,
   }
 
-
   onEnterViewport = () => {
-     this.setState({
-       visible: true,
-       active: this.props.id
-     });
-
+     this.setState({visible: true})
+    this.props.getScrollState(this.props.id)
    }
+
 
    onExitViewport = () => {
      this.setState({

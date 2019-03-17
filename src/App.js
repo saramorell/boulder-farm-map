@@ -4,6 +4,7 @@ import FarmList from './components/FarmList'
 import Header from './components/Header'
 import Map from './components/Map'
 import TestMap from './components/TestMap'
+import BoulderMap from './components/BoulderMap'
 import ScrollTrigger from 'react-scroll-trigger';
 import './App.css';
 
@@ -11,7 +12,7 @@ class App extends Component {
 
   state = {
     farms: [],
-    isActive: 2
+    isActive: 4
   }
 
 async componentDidMount(){
@@ -20,11 +21,17 @@ async componentDidMount(){
   this.setState({farms:json})
 }
 
+getScrollState = (active) => {
+  console.log("from app.js", active)
+  this.setState({isActive:active})
+}
+
 
 renderFarms = () => {
   return this.state.farms.map((f,i) => {
     return<Farms {...f} key={i}
     farms={this.state.farms}
+    getScrollState={this.getScrollState}
     />
   })
 }
@@ -45,7 +52,7 @@ renderFarms = () => {
 
               </div>
               <div className="col-4 position-fixed">
-                <TestMap
+                <BoulderMap
                 isActive={this.state.isActive} />
               </div>
             </div>

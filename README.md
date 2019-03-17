@@ -1,68 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Boulder Farm Map
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+## Wireframes
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Adobe XD Prototype](https://xd.adobe.com/view/18e8d5f3-a140-4fd9-6a92-4ad4d0b77ded-6ed9/?fullscreen&hints=off)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+![alt text](farm-map-wireframe.png "wireframe for Boulder Farm Map")
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Style Guide
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Colors:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+![alt text](farm-map-colors.png "colors for Boulder Farm Map")
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Fonts: Roboto & Nanito Sans
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`<link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto:400,700" rel="stylesheet">`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Planning
 
-## Learn More
+[Trello Board](https://trello.com/b/9XLW29BM/boulder-farm-map)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Schema/ ERD for Database
+[ERD for Boulder Farm Map](https://www.lucidchart.com/invitations/accept/2e079e10-6dfd-4e47-aaea-8644f7cb805c)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+![alt text](https://github.com/saramorell/boulder-farm-map/blob/master/boulder-farm-map-erd.png "ERD image for Boulder Farm Map")
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+## Server Routes Plan
+GET /api/farm *Retrieve all farms*
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+GET /api/farm_activities/:id *Retrieve a single farm's activities*
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
