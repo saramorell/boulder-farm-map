@@ -1,0 +1,36 @@
+
+.card-title {
+  margin-top: 12em!important;
+  margin-bottom: auto!important;
+  color:#ffffff;
+  font-size:2em;
+}
+
+.card {
+  margin-bottom: 5em!important;
+}
+
+.map-position {
+}
+
+.map{
+}
+
+.position-fixed {
+  visibility: visible;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+img.map-image {
+  height:100vh;
+  position:absolute;
+  top: 0;
+  right: 0;
+}
+
+.hidden {
+  visibility: hidden;
+}
