@@ -6,13 +6,14 @@ import Map from './components/Map'
 import TestMap from './components/TestMap'
 import BoulderMap from './components/BoulderMap'
 import ScrollTrigger from 'react-scroll-trigger';
-import './App.css';
+import './css/farms.css'
 
 class App extends Component {
 
   state = {
     farms: [],
-    isActive: 4
+    isActive: 0,
+    endHeader: false
   }
 
 async componentDidMount(){
@@ -36,12 +37,28 @@ renderFarms = () => {
   })
 }
 
+onEnterViewport = () => {
+  this.setState({
+    endHeader: false,
+  });
+ }
+
+onExitViewport = () => {
+  this.setState({
+    endHeader: true,
+  });
+}
+
 
 
   render() {
+   let endHeader = this.state.endHeader
+
     return (
       <div>
+      <ScrollTrigger onExit={this.onExitViewport} onEnter={this.onEnterViewport}>
         <Header />
+      </ScrollTrigger>
         <div className="row">
         <div className="container">
           <div className="row">
@@ -49,12 +66,13 @@ renderFarms = () => {
                 <FarmList
                     renderfarms={this.renderFarms}
                   />
-
               </div>
-              <div className="col-4 position-fixed">
+
+              <div className={`col-4 hidden  ${endHeader ? 'col-4 fade-in position-fixed show-map ' : 'col-4 position-fixed fade-out '}`}>
                 <BoulderMap
                 isActive={this.state.isActive} />
               </div>
+
             </div>
           </div>
         </div>
@@ -62,5 +80,7 @@ renderFarms = () => {
     );
   }
 }
+
+{/*className={` cls-26 grow ${isActive === 6 ? 'grow active' : ''}`}*/}
 
 export default App;

@@ -9,7 +9,6 @@ class Farms extends Component {
 
   state = {
     visible:false,
-    active:0,
   }
 
   onEnterViewport = () => {
@@ -18,17 +17,11 @@ class Farms extends Component {
    }
 
 
-   onExitViewport = () => {
-     this.setState({
-       visible: false,
-     });
-   }
-
     render() {
+      let url = `"${this.props.url}"`
+      console.log(url)
 
     let visible = this.state.visible
-
-
 
         return (
           <div>
@@ -36,13 +29,13 @@ class Farms extends Component {
 
             <div className={`card card-inverse ${visible ? 'card card-inverse pin-active' : ''}`}>
               <img src={ photo } className="card-img-top"/>
-              <div className="card-img-overlay d-flex flex-column " >
+              <div className=" d-flex flex-column " >
               <div className="card-title imgtext">{this.props.name}</div>
               </div>
                 <div className="card-body">
                 <h6>{this.props.location}</h6>
                 <h6>{this.props.contact}</h6>
-                <h6><a href={this.props.website}>{this.props.website}</a></h6>
+                <h6><a href={this.props.url} target="_blank">{this.props.website}</a></h6>
                 <p>{this.props.description}</p>
                 </div>
 

@@ -1,74 +1,80 @@
+body {
+  font-family: 'Nunito Sans', sans-serif!important;
+}
+.heading {
+  font-family: 'Open Sans', sans-serif!important;
+  font-size: 2.5em;
+}
+
+.jumbotron{
+  background-image: url(../images/riley-pope-89072-unsplash.jpg);
+  background-size: cover;
+  height:90vh;
+}
+
+.content{
+  margin-top: 10em;
+  margin-bottom: 10em;
+}
+
+.title-pad {
+  padding-top:1.8em;
+}
+.navbar {
+  background-color: rgba(255, 255, 255, 0.5);
+}
 
 .card-title {
-  margin-top: 12em!important;
-  margin-bottom: auto!important;
+  margin-top: -2.5em;
+  margin-left: .7em;
   color:#ffffff;
   font-size:2em;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .card {
   margin-bottom: 5em!important;
 }
 
-.map-position {
-}
-
-.map{
-}
-
-.position-fixed {
-  visibility: visible;
-  top: 0;
-  right: 0;
-  bottom: 0;
-}
-
-
-img.map-image {
+/* img.map-image {
   height:100vh;
   position:absolute;
   top: 0;
   right: 0;
+} */
+
+.map {
+  height:100vh;
 }
 
+/* show and hide map on scroll */
 .hidden {
-  visibility: hidden;
+opacity:0;
+}
+.fade-in {
+  transition:opacity .8s ease-in-out;
 }
 
+.show-map {
+ opacity:1;
+}
 
+.position-fixed {
+  top:0;
+  right: 0;
+}
 
-/* .grow-active { transform: scale(1.1); } */
+.fade-out {
+  transition:opacity .3s ease-in-out;
+}
 
-/* .cls-2{fill:#145e68;}
-.cls-3{fill:#f99108;}
-.cls-4{fill:#17b5c1;} */
-
+/* change marker color when active */
 .grow {
   -webkit-transition: fill .4s ease-in-out;
 	 	-moz-transition: fill .4s ease-in-out;
 	 	-o-transition: fill .4s ease-in-out;
 	 	transition: fill .4s ease-in-out;
   }
-#marker {fill: pink;}
 
-#marker.active {fill: blue!important;
-  stroke: blue;}
-
-/* .animate-marker{
-  animation-name: grow;
-}
-
-@keyframes grow {
-  from {
-    visibility: hidden;
-  }
-  to {
-    visibility: visible;
-  }
-} */
-
-/* transition: color 200ms,font-size 400ms;
-    transition-property: color, font-size;
-    transition-duration: 200ms, 400ms;
-    transition-timing-function: ease, ease;
-    transition-delay: 0s, 0s; */
+#marker.active {fill: coral;}
