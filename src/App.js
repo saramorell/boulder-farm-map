@@ -3,7 +3,10 @@ import Farms from './components/Farms'
 import FarmList from './components/FarmList'
 import Header from './components/Header'
 import Map from './components/Map'
+import Footer from './components/Footer'
 import TestMap from './components/TestMap'
+import SymbolMap from './components/SymbolMap'
+import SoftMap from './components/SoftMap'
 import BoulderMap from './components/BoulderMap'
 import ScrollTrigger from 'react-scroll-trigger';
 import './css/farms.css'
@@ -13,7 +16,8 @@ class App extends Component {
   state = {
     farms: [],
     isActive: 0,
-    endHeader: false
+    endHeader: false,
+    noFooter: true
   }
 
 async componentDidMount(){
@@ -40,12 +44,14 @@ renderFarms = () => {
 onEnterViewport = () => {
   this.setState({
     endHeader: false,
+    noFooter:false,
   });
  }
 
 onExitViewport = () => {
   this.setState({
     endHeader: true,
+    noFooter:true
   });
 }
 
@@ -53,29 +59,33 @@ onExitViewport = () => {
 
   render() {
    let endHeader = this.state.endHeader
+   let noFooter = this.state.noFooter
 
     return (
       <div>
       <ScrollTrigger onExit={this.onExitViewport} onEnter={this.onEnterViewport}>
         <Header />
       </ScrollTrigger>
-        <div className="row">
-        <div className="container">
-          <div className="row">
+        <div className="row list-bg">
+          <div className="container">
+            <div className="row">
               <div className="col-8">
                 <FarmList
                     renderfarms={this.renderFarms}
                   />
               </div>
 
-              <div className={`col-4 hidden  ${endHeader ? 'col-4 fade-in position-fixed show-map ' : 'col-4 position-fixed fade-out '}`}>
-                <BoulderMap
+              <div className={`col-4 hidden  ${endHeader || noFooter ? 'col-4 fade-in position-fixed show-map ' : 'col-4 position-fixed fade-out '}`}>
+                <SoftMap
                 isActive={this.state.isActive} />
               </div>
 
             </div>
           </div>
         </div>
+        <ScrollTrigger onExit={this.onExitViewport} onEnter={this.onEnterViewport}>
+          <Footer />
+        </ScrollTrigger>
       </div>
     );
   }

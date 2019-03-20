@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import '../css/farms.css'
+
 class FarmList extends Component {
     render() {
         return (
-          <div>
+          <div className="farm-list">
             {this.props.renderfarms()}
 
           </div>

@@ -11,32 +11,57 @@ class Farms extends Component {
     visible:false,
   }
 
-  onEnterViewport = () => {
+  onEnterViewport = ({progress, velocity}, ref) => {
      this.setState({visible: true})
     this.props.getScrollState(this.props.id)
    }
 
+   // getActivities = (activities) => {
+   //
+   //   console.log(activities)
+   //   let activity = {}
+   //   for(let i = 0; i< activities.length; i++){
+   //     activity = activities[i]
+   //   }
+   //   return activity
+   //
+   // }
+
 
     render() {
       let url = `"${this.props.url}"`
-      console.log(url)
 
     let visible = this.state.visible
+
+    let activities = this.props.activities
+    console.log(activities)
+
 
         return (
           <div>
           <ScrollTrigger onEnter={this.onEnterViewport} onExit={this.onExitViewport} />
 
-            <div className={`card card-inverse ${visible ? 'card card-inverse pin-active' : ''}`}>
+            <div className={`card shadow-sm card-inverse ${visible ? 'card shadow-sm card-inverse pin-active' : ''}`}>
               <img src={ photo } className="card-img-top"/>
               <div className=" d-flex flex-column " >
               <div className="card-title imgtext">{this.props.name}</div>
+              <div className="card-subtitle">{this.props.subtitle}</div>
               </div>
                 <div className="card-body">
                 <h6>{this.props.location}</h6>
                 <h6>{this.props.contact}</h6>
                 <h6><a href={this.props.url} target="_blank">{this.props.website}</a></h6>
                 <p>{this.props.description}</p>
+                <div>
+
+                {this.props.activities.map((activity, i)=> {
+                  let aIcon = activity.icon
+                  return <img src={require(`../images/farm-map-icons-svg/${aIcon}`)} className='activity-icon'/>
+
+                })}
+
+                </div>
+
                 </div>
 
             </div>
