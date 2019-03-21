@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ScrollTrigger from 'react-scroll-trigger';
 import '../css/farms.css'
 
 
@@ -14,16 +13,18 @@ class Header extends Component {
 
               <div className="container d-flex align-items-center justify-content-center">
                 <div className="title-pad">
-                  <img src={require('../images/farm-trail-logo-white.svg')} className='main-logo' />
+
+                  <img src={require('../images/farm-trail-logo-white.svg')} className='main-logo' alt="farm trail logo" />
                 </div>
               </div>
             </div>
 
             <section className="content">
               <div>
-              <row className="container d-flex justify-content-around align-items-center">
+              <div className="container">
+                <div className="row d-flex justify-content-around align-items-center">
                 <div className="col-6">
-                  <img src={require('../images/farm-trail-logo.svg')} class="logo" />
+                  <img src={require('../images/farm-trail-logo.svg')} className="logo" alt="logo" />
                   <p>
                   Early on, Boulder’s residents made clear a deep love
                   for their land. In 1967, Boulder became the first city
@@ -55,10 +56,11 @@ class Header extends Component {
                 </div>
                 <div className="col-4">
                   <div className="image-container">
-                    <img src={require('../images/growing-gardens.jpg')} />
+                    <img src={require('../images/growing-gardens.jpg')} alt='girl holding vegetables' />
                   </div>
                 </div>
-              </row>
+                </div>
+              </div>
               </div>
             </section>
           </div>

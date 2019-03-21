@@ -12,29 +12,14 @@ class Farms extends Component {
   }
 
   onEnterViewport = ({progress, velocity}, ref) => {
-     this.setState({visible: true})
+    this.setState({visible: true})
     this.props.getScrollState(this.props.id)
    }
 
-   // getActivities = (activities) => {
-   //
-   //   console.log(activities)
-   //   let activity = {}
-   //   for(let i = 0; i< activities.length; i++){
-   //     activity = activities[i]
-   //   }
-   //   return activity
-   //
-   // }
-
-
     render() {
       let url = `"${this.props.url}"`
-
-    let visible = this.state.visible
-
-    let activities = this.props.activities
-    console.log(activities)
+      let visible = this.state.visible
+      let activities = this.props.activities
 
 
         return (
@@ -57,12 +42,11 @@ class Farms extends Component {
                 {this.props.activities.map((activity, i)=> {
                   let aIcon = activity.icon
                   return <img src={require(`../images/farm-map-icons-svg/${aIcon}`)} className='activity-icon'/>
-
                 })}
 
                 </div>
 
-                </div>
+              </div>
 
             </div>
 
