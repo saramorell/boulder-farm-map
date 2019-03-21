@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import photo from '../images/farm_placeholder.jpg'
+import photo from '../images/aspen-moon-farm.jpg'
 import ScrollTrigger from 'react-scroll-trigger';
 
 import '../css/farms.css'
@@ -41,7 +41,7 @@ class Farms extends Component {
 
                 {this.props.activities.map((activity, i)=> {
                   let aIcon = activity.icon
-                  return <img src={require(`../images/farm-map-icons-svg/${aIcon}`)} className='activity-icon'/>
+                  return <img src={require(`../images/farm-map-icons-svg/${aIcon}`)} className='activity-icon' data-toggle="tooltip" data-placement="bottom" title={activity.name}/>
                 })}
 
                 </div>
