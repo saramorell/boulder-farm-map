@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import photo from '../images/aspen-moon-farm.jpg'
 import ScrollTrigger from 'react-scroll-trigger';
 
 import '../css/farms.css'
@@ -11,23 +10,35 @@ class Farms extends Component {
     visible:false,
   }
 
-  onEnterViewport = ({progress, velocity}, ref) => {
-    this.setState({visible: true})
-    this.props.getScrollState(this.props.id)
-   }
+  // onEnterViewport = () => {
+  //   this.setState({visible: true})
+  //   this.props.getScrollState(this.props.id)
+  //  }
+
+  onProgress = ({progress,velocity},ref) => {
+    if(progress >= 0.5){
+      this.setState({visible: true})
+      this.props.getScrollState(this.props.id)
+    }
+  }
+
 
     render() {
       let url = `"${this.props.url}"`
       let visible = this.state.visible
       let activities = this.props.activities
+      let fPhoto = this.props.img
 
 
         return (
           <div>
-          <ScrollTrigger onEnter={this.onEnterViewport} onExit={this.onExitViewport} />
+          <ScrollTrigger onProgress={this.onProgress} />
 
-            <div className={`card shadow-sm card-inverse ${visible ? 'card shadow-sm card-inverse pin-active' : ''}`}>
-              <img src={ photo } className="card-img-top"/>
+            <div className='card shadow-sm card-inverse'>
+
+            {/*className={`card shadow-sm card-inverse ${visible ? 'card shadow-sm card-inverse pin-active' : ''}`}*/}
+              <img src={require(`../images/farm-images/${fPhoto}`)} className="card-img-top"/>
+
               <div className=" d-flex flex-column " >
               <div className="card-title imgtext">{this.props.name}</div>
               <div className="card-subtitle">{this.props.subtitle}</div>

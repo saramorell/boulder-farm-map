@@ -19,7 +19,7 @@ class Header extends Component {
               </div>
             </div>
 
-            <section className="content">
+            <div className="content">
               <div>
               <div className="container">
                 <div className="row d-flex justify-content-around align-items-center">
@@ -62,7 +62,7 @@ class Header extends Component {
                 </div>
               </div>
               </div>
-            </section>
+            </div>
           </div>
         )
     }

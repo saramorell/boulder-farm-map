@@ -29,8 +29,10 @@ class SoftMap extends Component {
         <path id='marker' className={`cls-26 ${isActive === 14 ? 'grow bigger active' : ''}`} d="M294,510.5a14.18,14.18,0,1,0-27.65-2.79.88.88,0,0,1,0,.16h0l.06.34c.05.36.11.71.19,1.06l4.91,27.53,19.6-21.18h0A14,14,0,0,0,294,510.5Z"/>
         <text className="cls-27" transform="matrix(0.95, 0.3, -0.3, 0.95, 269.66, 509.82)">14</text>
 
+        <a href='#'>
         <path id='marker' className={`cls-26 ${isActive === 2 ? 'grow bigger active' : ''}`} d="M308.89,81a14.18,14.18,0,1,0-27.21,5.6,1,1,0,0,0,.07.15h0l.16.31c.16.32.32.64.5,1l12.91,24.81,12.38-26.07h0A14.14,14.14,0,0,0,308.89,81Z"/>
         <text className="cls-27" transform="translate(290.49 87.34)">2</text>
+        </a>
 
         <path id='marker' className={`cls-26 ${isActive === 5 ? 'grow bigger active' : ''}`} d="M391.39,165.88a14.18,14.18,0,1,0-27.21,5.6,1,1,0,0,0,.07.15h0l.16.31c.16.32.32.64.5.95L377.8,197.7l12.38-26.07h0A14.14,14.14,0,0,0,391.39,165.88Z"/>
         <text className="cls-27" transform="translate(372.71 172.7)">5</text>

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Farms from './components/Farms'
 import FarmList from './components/FarmList'
 import Header from './components/Header'
-import Map from './components/Map'
 import Footer from './components/Footer'
 import TestMap from './components/TestMap'
 import SymbolMap from './components/SymbolMap'
@@ -17,7 +16,8 @@ class App extends Component {
     farms: [],
     isActive: 0,
     endHeader: false,
-    noFooter: true
+    noFooter: true,
+    filteredFarms:[]
   }
 
 async componentDidMount(){
@@ -40,6 +40,11 @@ renderFarms = () => {
     />
   })
 }
+
+handleSearch = (inputText) => {
+    let filteredList = this.state.farms.filter(farm => farm.name.toLowerCase().indexOf(inputText.toLowerCase()) !== -1 || farm.location.toLowerCase().indexOf(inputText.toLowerCase()) !== -1) ||
+      this.setState({ filteredFarms: filteredList })
+  }
 
 onEnterViewport = () => {
   this.setState({
@@ -64,12 +69,11 @@ onExitViewport = () => {
     return (
       <div>
       <ScrollTrigger onExit={this.onExitViewport} onEnter={this.onEnterViewport}>
-        <Header />
+        <Header handleSearch={this.handleSearch} />
       </ScrollTrigger>
-        <div className="row list-bg">
           <div className="container">
             <div className="row">
-              <div className="col-8">
+              <div className="col-7">
                 <FarmList
                     renderfarms={this.renderFarms}
                   />
@@ -81,7 +85,6 @@ onExitViewport = () => {
               </div>
 
             </div>
-          </div>
         </div>
         <ScrollTrigger onExit={this.onExitViewport} onEnter={this.onEnterViewport}>
           <Footer />
@@ -90,7 +93,5 @@ onExitViewport = () => {
     );
   }
 }
-
-{/*className={` cls-26 grow ${isActive === 6 ? 'grow active' : ''}`}*/}
 
 export default App;
