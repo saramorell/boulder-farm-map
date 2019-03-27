@@ -24,7 +24,7 @@ class App extends Component {
   }
 
 async componentDidMount(){
-  const response = await fetch('http://localhost:3001/farms/')
+  const response = await fetch('https://boulder-farm-server.herokuapp.com/farms')
   const json = await response.json()
   this.setState({farms:json})
 }
