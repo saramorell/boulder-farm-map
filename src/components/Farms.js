@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ScrollTrigger from 'react-scroll-trigger';
+import * as Scroll from 'react-scroll';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 import '../css/farms.css'
 
@@ -9,11 +11,6 @@ class Farms extends Component {
   state = {
     visible:false,
   }
-
-  // onEnterViewport = () => {
-  //   this.setState({visible: true})
-  //   this.props.getScrollState(this.props.id)
-  //  }
 
   onProgress = ({progress,velocity},ref) => {
     if(progress >= 0.5){
@@ -32,35 +29,33 @@ class Farms extends Component {
 
         return (
           <div>
-          <ScrollTrigger onProgress={this.onProgress} />
+            <ScrollTrigger onProgress={this.onProgress} />
+            <Element name={this.props.id} className='element'>
+              <div className='card shadow-sm'>
+                <img src={require(`../images/farm-images/${fPhoto}`)} className="card-img-top "/>
 
-            <div className='card shadow-sm card-inverse'>
-
-            {/*className={`card shadow-sm card-inverse ${visible ? 'card shadow-sm card-inverse pin-active' : ''}`}*/}
-              <img src={require(`../images/farm-images/${fPhoto}`)} className="card-img-top"/>
-
-              <div className=" d-flex flex-column " >
-              <div className="card-title imgtext">{this.props.name}</div>
-              <div className="card-subtitle">{this.props.subtitle}</div>
-              </div>
-                <div className="card-body">
-                <h6>{this.props.location}</h6>
-                <h6>{this.props.contact}</h6>
-                <h6><a href={this.props.url} target="_blank">{this.props.website}</a></h6>
-                <p>{this.props.description}</p>
-                <div>
-
-                {this.props.activities.map((activity, i)=> {
-                  let aIcon = activity.icon
-                  return <img src={require(`../images/farm-map-icons-svg/${aIcon}`)} className='activity-icon' data-toggle="tooltip" data-placement="bottom" title={activity.name}/>
-                })}
-
+                <div className="title-wrapper d-flex flex-column">
+                  <div className="card-title">{this.props.name}</div>
+                  <div className="card-subtitle">{this.props.subtitle}</div>
                 </div>
+                  <div className="card-body">
+                  <h6>{this.props.location}</h6>
+                  <h6>{this.props.contact}</h6>
+                  <h6><a href={this.props.url} target="_blank">{this.props.website}</a></h6>
+                  <p>{this.props.description}</p>
+                  <div>
 
+                  {this.props.activities.map((activity, i)=> {
+                    let aIcon = activity.icon
+                    return <img src={require(`../images/farm-map-icons-svg/${aIcon}`)} className='activity-icon' data-toggle="tooltip" data-placement="bottom" title={activity.name}/>
+                  })}
+                  </div>
+                  <span style={{color:'#F58220', paddingRight:"1em", float:'right'}}>
+                  <i class="far fa-heart fa-lg"></i>
+                  </span>
+                </div>
               </div>
-
-            </div>
-
+              </Element>
           </div>
 
         )

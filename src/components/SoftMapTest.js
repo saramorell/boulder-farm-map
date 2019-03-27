@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../css/farms.css'
+import ScrollTrigger from 'react-scroll-trigger';
 import * as Scroll from 'react-scroll';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
@@ -26,113 +27,113 @@ class SoftMap extends Component {
 
         <g id="markers" cursor='pointer'>
 
-        <Link id='marker' cursor='pointer' activeClass="active" to='6' spy={true} smooth={true} offset={-50} duration={500}>
-        <path className='cls-26' d="M257.77,505.07a14.18,14.18,0,0,0-22,17.88,14.35,14.35,0,0,0,4.42,3.62l.15.07h0l.32.14c.32.16.65.3,1,.43l25.66,11.11-6.83-28h0A14.24,14.24,0,0,0,257.77,505.07Z"/>
+        <Link id='marker' cursor='pointer' activeClass="active" to='6'   smooth={true}  offset={-50} duration={500}>
+        <path className={`cls-26 ${isActive === 6 ? 'grow bigger active' : ''}`} d="M257.77,505.07a14.18,14.18,0,0,0-22,17.88,14.35,14.35,0,0,0,4.42,3.62l.15.07h0l.32.14c.32.16.65.3,1,.43l25.66,11.11-6.83-28h0A14.24,14.24,0,0,0,257.77,505.07Z"/>
         <text className="cls-27" transform="translate(246.94 521.58) rotate(-39.08)">6</text>
         </Link>
 
-        <Link id='marker' activeClass="active" to='14' spy={true} smooth={true}offset={-50} duration={500}>
-        <path className='cls-26' d="M294,510.5a14.18,14.18,0,1,0-27.65-2.79.88.88,0,0,1,0,.16h0l.06.34c.05.36.11.71.19,1.06l4.91,27.53,19.6-21.18h0A14,14,0,0,0,294,510.5Z"/>
+        <Link id='marker' activeClass="active" to='14' smooth={true}  offset={-50} duration={500}>
+        <path className={`cls-26 ${isActive === 14 ? 'grow bigger active' : ''}`} d="M294,510.5a14.18,14.18,0,1,0-27.65-2.79.88.88,0,0,1,0,.16h0l.06.34c.05.36.11.71.19,1.06l4.91,27.53,19.6-21.18h0A14,14,0,0,0,294,510.5Z"/>
         <text className="cls-27" transform="matrix(0.95, 0.3, -0.3, 0.95, 269.66, 509.82)">14</text>
         </Link>
 
-        <Link id='marker' activeClass="active" to='2' spy={true} smooth={true}offset={-50} duration={500}>
-        <path className='cls-26' d="M308.89,81a14.18,14.18,0,1,0-27.21,5.6,1,1,0,0,0,.07.15h0l.16.31c.16.32.32.64.5,1l12.91,24.81,12.38-26.07h0A14.14,14.14,0,0,0,308.89,81Z"/>
+        <Link id='marker' activeClass="active" to='2' smooth={true}  offset={-50} duration={500}>
+        <path className={`cls-26 ${isActive === 2 ? 'grow bigger active' : ''}`} d="M308.89,81a14.18,14.18,0,1,0-27.21,5.6,1,1,0,0,0,.07.15h0l.16.31c.16.32.32.64.5,1l12.91,24.81,12.38-26.07h0A14.14,14.14,0,0,0,308.89,81Z"/>
         <text className="cls-27" transform="translate(290.49 87.34)">2</text>
         </Link>
 
-        <Link id='marker' activeClass="active" to='5' spy={true} smooth={true}offset={-50} duration={500}>
-        <path className='cls-26' d="M391.39,165.88a14.18,14.18,0,1,0-27.21,5.6,1,1,0,0,0,.07.15h0l.16.31c.16.32.32.64.5.95L377.8,197.7l12.38-26.07h0A14.14,14.14,0,0,0,391.39,165.88Z"/>
+        <Link id='marker' activeClass="active" to='5'   smooth={true} offset={-50} duration={500}>
+        <path className={`cls-26 ${isActive === 5 ? 'grow bigger active' : ''}`} d="M391.39,165.88a14.18,14.18,0,1,0-27.21,5.6,1,1,0,0,0,.07.15h0l.16.31c.16.32.32.64.5.95L377.8,197.7l12.38-26.07h0A14.14,14.14,0,0,0,391.39,165.88Z"/>
         <text className="cls-27" transform="translate(372.71 172.7)">5</text>
         </Link>
 
-        <Link id='marker' activeClass="active" to='7' spy={true} smooth={true}offset={-50} duration={500}>
-        <path className='cls-26' d="M121.5,282.5a14.19,14.19,0,1,0-27.22,5.6l.07.15h0l.16.3c.15.33.32.65.49,1l12.92,24.8,12.37-26.06h0A14,14,0,0,0,121.5,282.5Z"/>
+        <Link id='marker' activeClass="active" to='7'   smooth={true} offset={-50} duration={500}>
+        <path className={`cls-26 ${isActive === 7 ? 'grow bigger active' : ''}`} d="M121.5,282.5a14.19,14.19,0,1,0-27.22,5.6l.07.15h0l.16.3c.15.33.32.65.49,1l12.92,24.8,12.37-26.06h0A14,14,0,0,0,121.5,282.5Z"/>
         <text className="cls-27" transform="translate(102.24 291.31)">7</text>
         </Link>
 
-        <Link id='marker' activeClass="active" to='9' spy={true} smooth={true}offset={-50} duration={500}>
-        <path className='cls-26'
+        <Link id='marker' activeClass="active" to='9'   smooth={true} offset={-50} duration={500}>
+        <path className={`cls-26 ${isActive === 9 ? 'grow bigger active' : ''}`}
          d="M218.14,457.1a14.18,14.18,0,1,0-27.22,5.6l.08.15h0l.16.31c.15.32.32.64.5.95l12.91,24.81,12.37-26.07h0A14.14,14.14,0,0,0,218.14,457.1Z"/>
         <text className="cls-27" transform="translate(199.46 465.29)">9</text>
         </Link>
 
-        <Link id='marker' activeClass="active" to='20' spy={true} smooth={true} offset={-50} duration={500}>
-        <path className='cls-26' d="M385.27,568.85a14.19,14.19,0,1,0-27.22,5.6l.07.15h0l.16.31c.15.32.32.64.5,1l12.91,24.81,12.37-26.07h0A14,14,0,0,0,385.27,568.85Z"/>
+        <Link id='marker' activeClass="active" to='20'   smooth={true}  offset={-50} duration={500}>
+        <path className={`cls-26 ${isActive === 20 ? 'grow bigger active' : ''}`} d="M385.27,568.85a14.19,14.19,0,1,0-27.22,5.6l.07.15h0l.16.31c.15.32.32.64.5,1l12.91,24.81,12.37-26.07h0A14,14,0,0,0,385.27,568.85Z"/>
         <text className="cls-27" transform="matrix(1, 0.01, -0.01, 1, 362.06, 575.15)">20</text>
         </Link>
 
-        <Link id='marker' activeClass="active" to='21' spy={true} smooth={true} offset={-50} duration={500}>
-        <path className='cls-26' d="M439,654.88c-.18-.31-.35-.64-.51-1l-.59-1.13h.1a14.76,14.76,0,1,1,28.59-5.17,14.48,14.48,0,0,1-.95,5.17h.05l-.38.83-12.87,27.11Z"/>
-        <path className='cls-26' d="M451.8,633.42a14.18,14.18,0,0,1,13,19.93h0l-12.37,26.07-12.91-24.81c-.18-.31-.35-.63-.5-1l-.16-.31h0l-.07-.15a14.19,14.19,0,0,1,13-19.78m0-1.15a15.35,15.35,0,0,0-15.34,15.33,15.14,15.14,0,0,0,.71,4.6h-.23l.86,1.68.16.31c.15.31.33.66.52,1L451.37,680l1.07,2,1-2.09,12.37-26.07.78-1.64h-.16a15.32,15.32,0,0,0-14.62-19.93Z"/>
+        <Link id='marker' activeClass="active" to='21'   smooth={true}  offset={-50} duration={500}>
+        <path className={`cls-26 ${isActive === 21 ? 'grow bigger active' : ''}`} d="M439,654.88c-.18-.31-.35-.64-.51-1l-.59-1.13h.1a14.76,14.76,0,1,1,28.59-5.17,14.48,14.48,0,0,1-.95,5.17h.05l-.38.83-12.87,27.11Z"/>
+        <path className={`cls-26 ${isActive === 21 ? 'grow bigger active' : ''}`} d="M451.8,633.42a14.18,14.18,0,0,1,13,19.93h0l-12.37,26.07-12.91-24.81c-.18-.31-.35-.63-.5-1l-.16-.31h0l-.07-.15a14.19,14.19,0,0,1,13-19.78m0-1.15a15.35,15.35,0,0,0-15.34,15.33,15.14,15.14,0,0,0,.71,4.6h-.23l.86,1.68.16.31c.15.31.33.66.52,1L451.37,680l1.07,2,1-2.09,12.37-26.07.78-1.64h-.16a15.32,15.32,0,0,0-14.62-19.93Z"/>
         <text className="cls-27" transform="translate(442.79 653.49)">21</text>
         </Link>
 
-        <Link id='marker' activeClass="active" to='19' spy={true} smooth={true} offset={-50} duration={500}>
-        <path className='cls-26' d="M439,735.91c-.18-.3-.35-.63-.51-1l-.59-1.13h.1a14.77,14.77,0,1,1,27.64,0h.05l-.38.82-12.87,27.11Z"/>
-        <path className='cls-26' d="M451.8,714.45a14.18,14.18,0,0,1,13,19.94h0l-12.37,26.06-12.91-24.8c-.18-.31-.35-.63-.5-1l-.16-.3h0l-.07-.15a14.19,14.19,0,0,1,13-19.79m0-1.15a15.36,15.36,0,0,0-15.34,15.34,15.19,15.19,0,0,0,.71,4.6h-.23l.86,1.68.16.3c.15.32.33.66.52,1L451.37,761l1.07,2,1-2.08,12.37-26.07.78-1.64h-.16A15.33,15.33,0,0,0,451.8,713.3Z"/>
+        <Link id='marker' activeClass="active" to='19'   smooth={true}  offset={-50} duration={500}>
+        <path className={`cls-26 ${isActive === 19 ? 'grow bigger active' : ''}`} d="M439,735.91c-.18-.3-.35-.63-.51-1l-.59-1.13h.1a14.77,14.77,0,1,1,27.64,0h.05l-.38.82-12.87,27.11Z"/>
+        <path className={`cls-26 ${isActive === 19 ? 'grow bigger active' : ''}`} d="M451.8,714.45a14.18,14.18,0,0,1,13,19.94h0l-12.37,26.06-12.91-24.8c-.18-.31-.35-.63-.5-1l-.16-.3h0l-.07-.15a14.19,14.19,0,0,1,13-19.79m0-1.15a15.36,15.36,0,0,0-15.34,15.34,15.19,15.19,0,0,0,.71,4.6h-.23l.86,1.68.16.3c.15.32.33.66.52,1L451.37,761l1.07,2,1-2.08,12.37-26.07.78-1.64h-.16A15.33,15.33,0,0,0,451.8,713.3Z"/>
         <text className="cls-27" transform="translate(442.8 734.53)">19</text>
         </Link>
 
-        <Link id='marker' activeClass="active" to='8' spy={true} smooth={true} offset={-50} duration={500}>
-        <path className='cls-26' d="M108,517.69a14.18,14.18,0,1,0-25.71-10.53s0,.11,0,.16h0l0,.35a9.46,9.46,0,0,0-.12,1.07L79,536.52l24.81-14.73h0A14,14,0,0,0,108,517.69Z"/>
+        <Link id='marker' activeClass="active" to='8'   smooth={true}  offset={-50} duration={500}>
+        <path className={`cls-26 ${isActive === 8 ? 'grow bigger active' : ''}`} d="M108,517.69a14.18,14.18,0,1,0-25.71-10.53s0,.11,0,.16h0l0,.35a9.46,9.46,0,0,0-.12,1.07L79,536.52l24.81-14.73h0A14,14,0,0,0,108,517.69Z"/>
         <text className="cls-27" transform="matrix(0.83, 0.56, -0.56, 0.83, 87.44, 513.8)">8</text>
         </Link>
 
-        <Link id='marker' activeClass="active" to='13' spy={true} smooth={true} offset={-50} duration={500}>
-        <path className='cls-26' d="M83.18,501.31a14.18,14.18,0,1,0-27.33,5c0,.06,0,.1.07.16h0l.16.31c.14.32.3.65.47,1l12.38,25.08L81.84,507h0A14.06,14.06,0,0,0,83.18,501.31Z"/>
+        <Link id='marker' activeClass="active" to='13'   smooth={true}  offset={-50} duration={500}>
+        <path className={`cls-26 ${isActive === 13 ? 'grow bigger active' : ''}`} d="M83.18,501.31a14.18,14.18,0,1,0-27.33,5c0,.06,0,.1.07.16h0l.16.31c.14.32.3.65.47,1l12.38,25.08L81.84,507h0A14.06,14.06,0,0,0,83.18,501.31Z"/>
         <text className="cls-27" transform="matrix(1, 0.02, -0.02, 1, 60.18, 507.53)">13</text>
         </Link>
 
-        <Link id='marker' activeClass="active" to='11' spy={true} smooth={true} offset={-50} duration={500}>
-        <path className='cls-26' d="M52.42,498.05a14.18,14.18,0,1,0-20,19.29l.14.09h0l.3.18.93.54L58,532.2l-3.49-28.64h0A14.21,14.21,0,0,0,52.42,498.05Z"/>
+        <Link id='marker' activeClass="active" to='11'   smooth={true}  offset={-50} duration={500}>
+        <path className={`cls-26 ${isActive === 11 ? 'grow bigger active' : ''}`} d="M52.42,498.05a14.18,14.18,0,1,0-20,19.29l.14.09h0l.3.18.93.54L58,532.2l-3.49-28.64h0A14.21,14.21,0,0,0,52.42,498.05Z"/>
         <text className="cls-29" transform="matrix(0.84, -0.53, 0.53, 0.84, 36.06, 515)">11</text>
         </Link>
 
-        <Link id='marker' activeClass="active" to='4' spy={true} smooth={true} offset={-50} duration={500}>
-        <path className='cls-26' d="M73.64,558.67a14.18,14.18,0,1,0-26.76,7.47,1.09,1.09,0,0,0,.08.15h0l.18.29c.18.32.37.62.57.92l14.6,23.85,10.54-26.86h0A14.12,14.12,0,0,0,73.64,558.67Z"/>
+        <Link id='marker' activeClass="active" to='4'   smooth={true}  offset={-50} duration={500}>
+        <path className={`cls-26 ${isActive === 4 ? 'grow bigger active' : ''}`} d="M73.64,558.67a14.18,14.18,0,1,0-26.76,7.47,1.09,1.09,0,0,0,.08.15h0l.18.29c.18.32.37.62.57.92l14.6,23.85,10.54-26.86h0A14.12,14.12,0,0,0,73.64,558.67Z"/>
         <text className="cls-27" transform="translate(54.82 568.16) rotate(-3.97)">4</text>
         <text/>
         </Link>
 
-        <Link id='marker' activeClass="active" to='3' spy={true} smooth={true} offset={-50} duration={500}>
-        <path className='cls-26' d="M42.47,561.48a14.18,14.18,0,1,0-15,23.38l.16.06h0l.33.1c.34.12.69.22,1,.31l26.77,8.09-10-27.07h0A14,14,0,0,0,42.47,561.48Z"/>
+        <Link id='marker' activeClass="active" to='3'   smooth={true}  offset={-50} duration={500}>
+        <path className={`cls-26 ${isActive === 3 ? 'grow bigger active' : ''}`} d="M42.47,561.48a14.18,14.18,0,1,0-15,23.38l.16.06h0l.33.1c.34.12.69.22,1,.31l26.77,8.09-10-27.07h0A14,14,0,0,0,42.47,561.48Z"/>
         <text className="cls-27" transform="translate(34.87 580.95) rotate(-45.69)">3</text><text/>
         </Link>
 
-        <Link id='marker' activeClass="active" to='16' spy={true} smooth={true} offset={-50} duration={500}>
-        <path className='cls-26' d="M178.14,652c-.18-.3-.35-.63-.51-1l-.59-1.13h.1a14.77,14.77,0,1,1,27.64,0h.06l-.39.82-12.87,27.11Z"/>
-        <path className='cls-26' d="M191,630.49a14.18,14.18,0,0,1,13,19.94h0l-12.37,26.06-12.91-24.8c-.18-.31-.35-.63-.5-1l-.16-.3h0c0-.06-.05-.1-.07-.15a14.19,14.19,0,0,1,13-19.79m0-1.15a15.33,15.33,0,0,0-14.63,19.94h-.23L177,651l.16.3c.15.31.33.66.52,1L190.54,677l1.07,2.05,1-2.08L205,650.92l.78-1.64h-.16A15.33,15.33,0,0,0,191,629.34Z"/>
+        <Link id='marker' activeClass="active" to='16'   smooth={true}  offset={-50} duration={500}>
+        <path className={`cls-26 ${isActive === 16 ? 'grow bigger active' : ''}`} d="M178.14,652c-.18-.3-.35-.63-.51-1l-.59-1.13h.1a14.77,14.77,0,1,1,27.64,0h.06l-.39.82-12.87,27.11Z"/>
+        <path className={`cls-26 ${isActive === 16 ? 'grow bigger active' : ''}`} d="M191,630.49a14.18,14.18,0,0,1,13,19.94h0l-12.37,26.06-12.91-24.8c-.18-.31-.35-.63-.5-1l-.16-.3h0c0-.06-.05-.1-.07-.15a14.19,14.19,0,0,1,13-19.79m0-1.15a15.33,15.33,0,0,0-14.63,19.94h-.23L177,651l.16.3c.15.31.33.66.52,1L190.54,677l1.07,2.05,1-2.08L205,650.92l.78-1.64h-.16A15.33,15.33,0,0,0,191,629.34Z"/>
         <text className="cls-27" transform="translate(181.97 650.57)">16</text>
         </Link>
 
-        <Link id='marker' activeClass="active" to='12' spy={true} smooth={true} offset={-50} duration={500}>
-        <path className='cls-26' d="M228.34,200a14.18,14.18,0,1,0-27.22,5.6,1,1,0,0,1,.07.15h0l.16.31c.15.32.32.64.5.95l12.91,24.81,12.37-26.07h0A14.14,14.14,0,0,0,228.34,200Z"/>
+        <Link id='marker' activeClass="active" to='12'   smooth={true}  offset={-50} duration={500}>
+        <path className={`cls-26 ${isActive === 12 ? 'grow bigger active' : ''}`} d="M228.34,200a14.18,14.18,0,1,0-27.22,5.6,1,1,0,0,1,.07.15h0l.16.31c.15.32.32.64.5.95l12.91,24.81,12.37-26.07h0A14.14,14.14,0,0,0,228.34,200Z"/>
         <text className="cls-27" transform="translate(205.15 205.91)">12</text>
         </Link>
 
-        <Link id='marker' activeClass="active" to='18' spy={true} smooth={true} offset={-50} duration={500}>
-        <path className='cls-26' d="M143.51,133.49A14.19,14.19,0,1,0,120,148.32l.12.12h0l.25.23q.39.38.81.72L142,168.05l2.4-28.75h0A14.15,14.15,0,0,0,143.51,133.49Z"/>
+        <Link id='marker' activeClass="active" to='18'   smooth={true}  offset={-50} duration={500}>
+        <path className={`cls-26 ${isActive === 18 ? 'grow bigger active' : ''}`} d="M143.51,133.49A14.19,14.19,0,1,0,120,148.32l.12.12h0l.25.23q.39.38.81.72L142,168.05l2.4-28.75h0A14.15,14.15,0,0,0,143.51,133.49Z"/>
         <text className="cls-27" transform="matrix(0.94, -0.35, 0.35, 0.94, 123.33, 148.63)">18</text>
         </Link>
 
-        <Link id='marker' activeClass="active" to='10' spy={true} smooth={true} offset={-50} duration={500}>
-        <path className='cls-26' d="M175.52,140.82a14.18,14.18,0,1,0-27.78-.55l0,.16h0l.09.33c.08.36.17.7.27,1.05l7.12,27,17.82-22.69h0A14.09,14.09,0,0,0,175.52,140.82Z"/>
+        <Link id='marker' activeClass="active" to='10'   smooth={true}  offset={-50} duration={500}>
+        <path className={`cls-26 ${isActive === 10 ? 'grow bigger active' : ''}`} d="M175.52,140.82a14.18,14.18,0,1,0-27.78-.55l0,.16h0l.09.33c.08.36.17.7.27,1.05l7.12,27,17.82-22.69h0A14.09,14.09,0,0,0,175.52,140.82Z"/>
         <text className="cls-27" transform="translate(151.57 141) rotate(12.75)">10</text>
         </Link>
 
-        <Link id='marker' activeClass="active" to='15' spy={true} smooth={true} offset={-50} duration={500}>
-        <path className='cls-26' d="M386.56,240.85a14.18,14.18,0,1,0-27.21,5.6,1,1,0,0,0,.07.15h0l.16.31c.16.32.32.64.5,1L373,272.67l12.38-26.07h0A14.14,14.14,0,0,0,386.56,240.85Z"/>
+        <Link to='15'   smooth={true}  offset={-50} duration={500}>
+        <path id='marker' className={`cls-26 ${isActive === 15 ? 'cls-26 grow active' : ''}`} d="M386.56,240.85a14.18,14.18,0,1,0-27.21,5.6,1,1,0,0,0,.07.15h0l.16.31c.16.32.32.64.5,1L373,272.67l12.38-26.07h0A14.14,14.14,0,0,0,386.56,240.85Z"/>
         <text className="cls-27" transform="translate(363.38 247.74)">15</text>
         </Link>
 
-        <Link id='marker' activeClass="active" to='17' spy={true} smooth={true} offset={-50} duration={500}>
-        <path className='cls-26' d="M400.94,285.7a14.19,14.19,0,1,0-27.22,5.6l.07.15h0l.16.31c.15.32.32.64.49.95l12.92,24.81,12.37-26.07h0A14,14,0,0,0,400.94,285.7Z"/>
+        <Link to='17' smooth={true}  offset={-50} duration={500}>
+        <path id='marker' className={`cls-26 ${isActive === 17 ? 'cls-26 grow active' : ''}`} d="M400.94,285.7a14.19,14.19,0,1,0-27.22,5.6l.07.15h0l.16.31c.15.32.32.64.49.95l12.92,24.81,12.37-26.07h0A14,14,0,0,0,400.94,285.7Z"/>
         <text className="cls-27" transform="translate(377.76 293.89)">17</text>
         </Link>
 
-        <Link id='marker' activeClass="active" to='1' spy={true} smooth={true} offset={-50} duration={500}>
-        <path className='cls-26' d="M328.92,45.68a14.19,14.19,0,1,0-27.22,5.6l.07.15h0l.16.31c.15.32.32.64.49.95L315.33,77.5,327.7,51.43h0A14.15,14.15,0,0,0,328.92,45.68Z"/>
+        <Link to='1' smooth={true} offset={-50} duration={500}>
+        <path id='marker' className={`cls-26 ${isActive === 1 ? 'cls-26 grow active' : ''}`} d="M328.92,45.68a14.19,14.19,0,1,0-27.22,5.6l.07.15h0l.16.31c.15.32.32.64.49.95L315.33,77.5,327.7,51.43h0A14.15,14.15,0,0,0,328.92,45.68Z"/>
         <text className="cls-27" transform="translate(310.27 52.28)">1</text>
         </Link>
         </g>

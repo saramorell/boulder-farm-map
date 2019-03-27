@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import * as Scroll from 'react-scroll';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 import Farms from './components/Farms'
 import FarmList from './components/FarmList'
 import Header from './components/Header'
@@ -26,8 +29,8 @@ async componentDidMount(){
   this.setState({farms:json})
 }
 
+
 getScrollState = (active) => {
-  console.log("from app.js", active)
   this.setState({isActive:active})
 }
 
@@ -73,7 +76,7 @@ onExitViewport = () => {
       </ScrollTrigger>
           <div className="container">
             <div className="row">
-              <div className="col-7">
+              <div className="col-8">
                 <FarmList
                     renderfarms={this.renderFarms}
                   />
