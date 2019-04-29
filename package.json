@@ -6,6 +6,7 @@
     "bootstrap": "^4.3.1",
     "clean-react-props": "^0.2.11",
     "react": "^16.8.4",
+    "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8",
     "react-scroll": "^1.7.11",

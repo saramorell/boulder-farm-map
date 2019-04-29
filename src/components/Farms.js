@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import ScrollTrigger from 'react-scroll-trigger';
 import * as Scroll from 'react-scroll';
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller }
+from 'react-scroll'
+import { Tooltip, OverlayTrigger, Overlay, Button } from 'react-bootstrap'
 
 import '../css/farms.css'
 
@@ -25,6 +27,9 @@ class Farms extends Component {
       let visible = this.state.visible
       let activities = this.props.activities
       let fPhoto = this.props.img
+      let renderTooltip = this.renderTooltip
+
+
 
 
         return (
@@ -47,7 +52,24 @@ class Farms extends Component {
 
                   {this.props.activities.map((activity, i)=> {
                     let aIcon = activity.icon
-                    return <img src={require(`../images/farm-map-icons-svg/${aIcon}`)} className='activity-icon' data-toggle="tooltip" data-placement="bottom" title={activity.name}/>
+                    console.log(activity)
+
+
+                    return<OverlayTrigger
+                      placement="bottom"
+                      title={activity.name}
+                      overlay={
+                        <Tooltip
+                          id={`tooltip-${activity.name}`}
+                          className={activity.class}
+                          >
+                          {activity.name}
+                        </Tooltip>
+                      }
+                    >
+                    <img src={require(`../images/farm-map-icons-svg/${aIcon}`)} className='activity-icon' data-toggle="tooltip" data-placement="bottom" title={activity.name}/>
+                    </OverlayTrigger>
+
                   })}
                   </div>
                   <span style={{color:'#F58220', paddingRight:"1em", float:'right'}}>

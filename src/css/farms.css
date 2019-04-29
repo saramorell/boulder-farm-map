@@ -124,19 +124,144 @@ body {
   padding-right: .25em;
 }
 
-.tooltip.bs-tooltip-bottom .tooltip-inner {
- background:#444 !important;
+/* .blue-tooltip + .tooltip.bs-tooltip-bottom > .tooltip-inner {
+ background:#1DAEEC !important;
  color:#ffffff!important;
  }
 
- .tooltip .arrow:before {
- border-bottom-color:#444 !important;
+ .blue-tooltip + .tooltip > .arrow:before {
+ border-bottom-color:#1DAEEC !important;
   border-top-color:#444 !important;
-  }
+  } */
 
-/* svg {
-  height:80vh;
-} */
+
+  /* tooltip colors */
+  .animals > .tooltip-inner {
+   background:#1DAEEC !important;
+   color:#ffffff!important;
+   }
+   .animals > .arrow:before {
+   border-bottom-color:#1DAEEC !important;
+   border-top-color:#444 !important;
+   }
+
+  .tours > .tooltip-inner {
+    background:#F3822F !important;
+    color:#ffffff!important;
+    }
+    .tours > .arrow:before {
+    border-bottom-color:#F3822F !important;
+    border-top-color:#444 !important;
+    }
+
+  .farm-stand > .tooltip-inner {
+   background:#45AB4F !important;
+   color:#ffffff!important;
+   }
+   .farm-stand > .arrow:before {
+   border-bottom-color:#45AB4F !important;
+   border-top-color:#444 !important;
+   }
+
+  .sales > .tooltip-inner {
+    background:#A5CD9C !important;
+    color:#ffffff!important;
+    }
+    .sales > .arrow:before {
+    border-bottom-color:#A5CD9C !important;
+    border-top-color:#444 !important;
+    }
+
+  .volunteer > .tooltip-inner {
+    background:#786E64 !important;
+    color:#ffffff!important;
+    }
+    .volunteer > .arrow:before {
+    border-bottom-color:#786E64 !important;
+    border-top-color:#444 !important;
+    }
+
+     .workshops > .tooltip-inner {
+      background:#B0A8A1 !important;
+      color:#ffffff!important;
+      }
+      .workshops > .arrow:before {
+      border-bottom-color:#B0A8A1 !important;
+      border-top-color:#444 !important;
+      }
+
+      .dinners > .tooltip-inner {
+       background:#000000 !important;
+       color:#ffffff!important;
+       }
+       .dinners > .arrow:before {
+       border-bottom-color:#000000 !important;
+       border-top-color:#444 !important;
+       }
+
+       .picknicking > .tooltip-inner {
+        background:#E9178B !important;
+        color:#ffffff!important;
+        }
+        .picknicking > .arrow:before {
+        border-bottom-color:#E9178B !important;
+        border-top-color:#444 !important;
+        }
+
+        .wool > .tooltip-inner {
+         background:#25428C !important;
+         color:#ffffff!important;
+         }
+         .wool > .arrow:before {
+         border-bottom-color:#25428C !important;
+         border-top-color:#444 !important;
+         }
+
+         .pumpkin > .tooltip-inner {
+          background:#F3822F !important;
+          color:#ffffff!important;
+          }
+          .pumpkin > .arrow:before {
+          border-bottom-color:#F3822F !important;
+          border-top-color:#444 !important;
+          }
+
+          .corn > .tooltip-inner {
+           background:#FDC33B !important;
+           color:#ffffff!important;
+           }
+           .corn > .arrow:before {
+           border-bottom-color:#FDC33B !important;
+           border-top-color:#444 !important;
+           }
+
+           .hay-rides > .tooltip-inner {
+            background:#8F4930 !important;
+            color:#ffffff!important;
+            }
+            .hay-rides > .arrow:before {
+            border-bottom-color:#8F4930 !important;
+            border-top-color:#444 !important;
+            }
+
+            .you-pick > .tooltip-inner {
+             background:#8F4930 !important;
+             color:#ffffff!important;
+             }
+             .you-pick > .arrow:before {
+             border-bottom-color:#8F4930 !important;
+             border-top-color:#444 !important;
+             }
+
+             .x-mas > .tooltip-inner {
+              background:#8F4930 !important;
+              color:#ffffff!important;
+              }
+              .x-mas > .arrow:before {
+              border-bottom-color:#8F4930 !important;
+              border-top-color:#444 !important;
+              }
+
 
 
 /* show and hide map on scroll */
