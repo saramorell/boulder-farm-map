@@ -132,7 +132,7 @@ body {
  border-bottom-color:#1DAEEC !important;
   border-top-color:#444 !important;
   } */
-  
+
 /* tooltip colors */
 .animals>.tooltip-inner {
   background: #1DAEEC !important;
@@ -255,22 +255,22 @@ body {
 }
 
 .you-pick>.tooltip-inner {
-  background: #8F4930 !important;
+  background: #A34698 !important;
   color: #ffffff !important;
 }
 
 .you-pick>.arrow:before {
-  border-bottom-color: #8F4930 !important;
+  border-bottom-color: #A34698 !important;
   border-top-color: #444 !important;
 }
 
 .x-mas>.tooltip-inner {
-  background: #8F4930 !important;
+  background: #CF242F !important;
   color: #ffffff !important;
 }
 
 .x-mas>.arrow:before {
-  border-bottom-color: #8F4930 !important;
+  border-bottom-color: #CF242F !important;
   border-top-color: #444 !important;
 }
 
