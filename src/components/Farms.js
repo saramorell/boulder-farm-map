@@ -12,6 +12,7 @@ class Farms extends Component {
 
   state = {
     visible:false,
+    favorite:false
   }
 
   onProgress = ({progress,velocity},ref) => {
@@ -21,6 +22,10 @@ class Farms extends Component {
     }
   }
 
+  setFavorite = () => {
+    this.setState({favorite: !this.state.favorite})
+  }
+
 
     render() {
       let url = `"${this.props.url}"`
@@ -28,6 +33,7 @@ class Farms extends Component {
       let activities = this.props.activities
       let fPhoto = this.props.img
       let renderTooltip = this.renderTooltip
+      let favorite = this.state.favorite
 
 
 
@@ -52,9 +58,6 @@ class Farms extends Component {
 
                   {this.props.activities.map((activity, i)=> {
                     let aIcon = activity.icon
-                    console.log(activity)
-
-
                     return<OverlayTrigger
                       placement="bottom"
                       title={activity.name}
@@ -73,7 +76,8 @@ class Farms extends Component {
                   })}
                   </div>
                   <span style={{color:'#F58220', paddingRight:"1em", float:'right'}}>
-                  <i class="far fa-heart fa-lg"></i>
+                    <i className={`far fa-heart fa-lg ${favorite ? 'fas fa-heart fa-lg' : ''}`} onClick={this.setFavorite}
+                      ></i>
                   </span>
                 </div>
               </div>
